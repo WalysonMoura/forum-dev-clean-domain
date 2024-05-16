@@ -10,5 +10,5 @@ type DeleteQuestionUseCaseResponse = {};
 export class DeleteQuestionUseCase {
   constructor(private questionRspository: QuestionsRepository) {}
 
-  async execute({}: DeleteQuestionUseCaseRequest) {}
+  async execute({}: Promise<DeleteQuestionUseCaseRequest>) {}
 }
