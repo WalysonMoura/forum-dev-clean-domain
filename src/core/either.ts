@@ -6,6 +6,13 @@ export class Left<L, R> {
   constructor(value: L) {
     this.value = value;
   }
+  isRight(): this is Right<L, R> {
+    return false;
+  }
+
+  isLeft(): this is Left<L, R> {
+    return true;
+  }
 }
 
 export class Right<L, R> {
@@ -30,6 +37,6 @@ export const left = <L, R>(value: L): Either<L, R> => {
   return new Left(value);
 };
 
-export const right = <L, R>(value: L): Either<L, R> => {
+export const right = <L, R>(value: R): Either<L, R> => {
   return new Right(value);
 };

@@ -2,7 +2,7 @@
 
 
 export class InMemoryQuestionsRepository  {
-    constructor(parameters) {
+    constructor() {
         
     }
 }
