@@ -19,9 +19,8 @@ export class CreateQuestionUseCase {
     content,
     title,
   }: CreateQuestionUseCaseRequest): Promise<CreateQuestionUseCaseResponse> {
+    const question = Question;
 
-const question = Question.c
-
-    return right({})
+    return right({ question });
   }
 }
